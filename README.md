@@ -1,2 +1,2 @@
 # CodingBat
-some logic problems solving
+JavaScript code practice
