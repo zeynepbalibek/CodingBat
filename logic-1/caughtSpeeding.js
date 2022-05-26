@@ -10,8 +10,7 @@ function caughtSpeeding(speed, isBirthday) {
     if (!(isBirthday)) {
         if (speed <= 60) {
             return 0;
-        }
-        if (speed > 60 && speed <= 80) {
+        } else if (speed > 60 && speed <= 80) {
             return 1;
         } else {
             return 2;
@@ -19,6 +18,21 @@ function caughtSpeeding(speed, isBirthday) {
     } else if (speed <= 65) {
         return 0;
     } else if (speed >= 65 && speed <= 85) {
+        return 1;
+    } else {
+        return 2;
+    }
+}
+
+// with variables
+
+function caughtSpeeding(speed, isBirthday) {
+    var lowLimit = 60 + isBirthday ? 5 : 0;
+    var highLimit = isBirthday ? 85 : 80;
+
+    if (speed <= lowLimit) {
+        return 0;
+    } else if (speed > lowLimit && speed <= highLimit) {
         return 1;
     } else {
         return 2;

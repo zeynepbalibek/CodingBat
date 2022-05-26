@@ -4,20 +4,16 @@
  * Note: the function Math.abs(num) computes the absolute value of a number.
  */
 
-// beginner code lol
+// optimize version
 
 function love6(a, b) {
-    if (a == 6 || b == 6) {
+    if (a == 6 || b == 6 || Math.abs(a - b) == 6 || a + b == 6) {
         return true;
     }
-    if (Math.abs(a - b) == 6 || a + b == 6) {
-        return true;
-    } else {
-        return false;
-    }
+    return false;
 }
 
-// optimize version
+// beginner code lol
 
 function love6(a, b) {
     if (a == 6 || b == 6) {

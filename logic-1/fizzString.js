@@ -16,3 +16,11 @@ function fizzString(str) {
         return str;
     }
 }
+
+// optimize version
+
+function fizzString(str) {
+    if (str.length() < 0) {
+        return str;
+    }
+}
